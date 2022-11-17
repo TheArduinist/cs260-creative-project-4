@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -34,5 +36,156 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category:hover, .category.selected:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.category.selected {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.category p {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.category button {
+  height: 2em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.form button {
+  margin-top: 5px;
+}
+
+.form label {
+  margin-bottom: 3px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.riddle {
+  border-bottom: 1px solid #4e28c2;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.riddle button {
+  margin-right: 5px;
+}
+
+.riddle p {
+  width: fit-content;
+}
+
+.riddle .answer {
+  color: white;
+  background-color: #4e28c2;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.riddle .question {
+  color: #4e28c2;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.App button {
+  background-color: #5f39d3;
+  color: white;
+  border: 1px solid #4e28c2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.App button:hover {
+  background-color: #4e28c2;
+}
+
+body {
+  background-color: #39bf6a;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #5f39d3;
+    height: 40px;
+    min-height: 40px;
+    margin-top: auto;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 601px) {
+  .section {
+    max-width: 30vw;
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .category-list {
+    display: flex;
+    overflow-x: auto;
+    width: 90vw;
+    max-width: 90vw;
+  }
+  
+  .category {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  
+  .category:not(:last-child) {
+    border-right: 1px solid #4e28c2;
+  }
+  
+  .category p {
+    width: max-content;
+  }
+  
+  .section {
+    width: 90vw;
+    max-width: 90vw;
   }
 }
